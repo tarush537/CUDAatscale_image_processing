@@ -27,6 +27,9 @@ run:
 data:
 	curl -s https://sipi.usc.edu/database/textures.tar.gz | tar xvz -C ./data
 
+proof:
+	tar -czvf proof.tar.gz ./data/output
+
 clean:
 	rm -f ./bin/main.exe
 

@@ -35,6 +35,11 @@ To clean the built executable run:
 make clean
 ```
 
+To generate a zip of proof that my code ran correctly run:
+```shell 
+make proof
+```
+
 ## Code Organization
 
 ```bin/```
