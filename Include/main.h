@@ -1,0 +1,14 @@
+//
+// Created by gaarg on 23-07-2024.
+//
+
+#ifndef CUDAATSCALE_IMAGE_PROCESSING_MAIN_H
+#define CUDAATSCALE_IMAGE_PROCESSING_MAIN_H
+
+
+class main {
+
+};
+
+
+#endif //CUDAATSCALE_IMAGE_PROCESSING_MAIN_H
