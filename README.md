@@ -1,32 +1,57 @@
-# CUDAatScaleForTheEnterpriseCourseProjectTemplate
-This is a template for the course project for the CUDA at Scale for the Enterprise
+# Blur Images
+
+This template is part of the course project for the "CUDA at Scale for the Enterprise" course.
 
 ## Project Description
+The project involves blurring multiple images, each sized 512 by 512 pixels. It reads unblurred images from one folder and outputs the blurred versions to another folder.
 
-Beyond just being a template for course members, this project can be used by non-course members as the general structure for CUDA projects.
+This is my submission for an assignment in the GPU Programming Specialization Coursera course from Johns Hopkins University.
+
+### Installation and Usage
+
+To install dependencies, run:
+```shell
+make install
+```
+
+To download the test dataset, run:
+```shell
+make data
+```
+
+To build the executable, run:
+```shell
+make build
+```
+This will produce `./bin/main.exe`.
+
+To run the executable with default arguments, use:
+```shell 
+make run
+```
+
+For help with running `./bin/main.exe` with different arguments, execute it without any additional arguments.
+
+To clean the built executable, run:
+```shell 
+make clean
+```
+
+To generate a zip file proving that the code ran correctly, run:
+```shell 
+make proof
+```
 
 ## Code Organization
 
-```bin/```
-This folder should hold all binary/executable code that is built automatically or manually. Executable code should have use the .exe extension or programming language-specific extension.
-
-```data/```
-This folder should hold all example data in any format. If the original data is rather large or can be brought in via scripts, this can be left blank in the respository, so that it doesn't require major downloads when all that is desired is the code/structure.
-
-```lib/```
-Any libraries that are not installed via the Operating System-specific package manager should be placed here, so that it is easier for inclusion/linking.
-
-```src/```
-The source code should be placed here in a hierarchical fashion, as appropriate.
-
-```README.md```
-This file should hold the description of the project so that anyone cloning or deciding if they want to clone this repository can understand its purpose to help with their decision.
-
-```INSTALL```
-This file should hold the human-readable set of instructions for installing the code so that it can be executed. If possible it should be organized around different operating systems, so that it can be done by as many people as possible with different constraints.
-
-```Makefile or CMAkeLists.txt or build.sh```
-There should be some rudimentary scripts for building your project's code in an automatic fashion.
-
-```run.sh```
-An optional script used to run your executable code, either with or without command-line arguments.
+- **`bin/`**: Contains `main.exe` after running `make build`.
+- **`data/`**: After running `make data`, this folder will contain textures in `./data/textures`. Running `main.exe` will place blurred texture files in `./data/output` using `make run`.
+- **`lib/`**: No libraries are included; everything is installed using `sudo apt-get install`.
+- **`src/`**: Contains all source files, including `main.cuh` (header file) and `main.cu` (code file).
+- **`README.md`**: Describes the project to help others decide whether to clone the repository.
+- **`INSTALL`**: Instructions for installing `libopencv` and `libboost` on Ubuntu:
+  ```shell
+  make install
+  ```
+- **`Makefile` or `CMakeLists.txt` or `build.sh`**: Contains the make rules.
+- **`run.sh`**: Not included. Use `main.exe` in the `bin` folder instead.
