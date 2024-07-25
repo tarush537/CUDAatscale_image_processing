@@ -1,80 +1,57 @@
-# Blur images
-This is a filled in template for the course project for the CUDA at Scale for the Enterprise
+# Blur Images
+
+This template is part of the course project for the "CUDA at Scale for the Enterprise" course.
 
 ## Project Description
-The project blurs a number of images sized 512 by 512. It reads unblurred files from one folder and output blurred versions
-in another folder.
+The project involves blurring multiple images, each sized 512 by 512 pixels. It reads unblurred images from one folder and outputs the blurred versions to another folder.
 
-It is my entry for an assignment in the gpu programming specialization coursera course from John Hopkins university.
+This is my submission for an assignment in the GPU Programming Specialization Coursera course from Johns Hopkins University.
 
-To install dependencies run:
+### Installation and Usage
+
+To install dependencies, run:
 ```shell
 make install
 ```
-To download the test dataset run:
 
+To download the test dataset, run:
 ```shell
 make data
 ```
 
-To build the executable run:
+To build the executable, run:
 ```shell
 make build
 ```
-This produces ./bin/main.exe.
+This will produce `./bin/main.exe`.
 
-To run this executable using default arguments run:
+To run the executable with default arguments, use:
 ```shell 
 make run
 ```
 
-To get help on running ./bin/main.exe with different arguments, just run it without extra arguments.
+For help with running `./bin/main.exe` with different arguments, execute it without any additional arguments.
 
-To clean the built executable run:
+To clean the built executable, run:
 ```shell 
 make clean
 ```
 
-To generate a zip of proof that my code ran correctly run:
+To generate a zip file proving that the code ran correctly, run:
 ```shell 
 make proof
 ```
 
 ## Code Organization
 
-```bin/```
-This folder contains main.exe after running the following command:
-```shell
-make build
-```
-
-```data/```
-After running the following command the data folder will contain textures in the folder ./data/textures.
-```shell
-make data
-```
-After running main.exe using the following command ./data/output will contain blurred texture files:
-```shell
-make run
-```
-
-```lib/```
-There are no libraries. Everything is installed using sudo apt-get install.
-
-```src/```
-All source is in the src folder. It consists of a header file main.cuh and a code file main.cu.
-
-```README.md```
-This file should hold the description of the project so that anyone cloning or deciding if they want to clone this repository can understand its purpose to help with their decision.
-
-```INSTALL```
-To install libopencv and libboost on ubuntu do:
-```shell
-make install
-```
-
-```Makefile or CMAkeLists.txt or build.sh```
-Makefile contains the make rules.
-
-```run.sh```
-There is no run.sh. Just use main.exe in the bin folder.
+- **`bin/`**: Contains `main.exe` after running `make build`.
+- **`data/`**: After running `make data`, this folder will contain textures in `./data/textures`. Running `main.exe` will place blurred texture files in `./data/output` using `make run`.
+- **`lib/`**: No libraries are included; everything is installed using `sudo apt-get install`.
+- **`src/`**: Contains all source files, including `main.cuh` (header file) and `main.cu` (code file).
+- **`README.md`**: Describes the project to help others decide whether to clone the repository.
+- **`INSTALL`**: Instructions for installing `libopencv` and `libboost` on Ubuntu:
+  ```shell
+  make install
+  ```
+- **`Makefile` or `CMakeLists.txt` or `build.sh`**: Contains the make rules.
+- **`run.sh`**: Not included. Use `main.exe` in the `bin` folder instead.
